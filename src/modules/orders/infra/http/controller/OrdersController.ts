@@ -23,7 +23,7 @@ export default class OrdersController {
 
     const createOrder = container.resolve(CreateOrderService);
 
-    const order = createOrder.execute({
+    const order = await createOrder.execute({
       customer_id,
       products,
     });
